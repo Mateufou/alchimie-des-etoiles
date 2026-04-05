@@ -1,0 +1,194 @@
+@import "tailwindcss";
+
+/* ============================================
+   L'Alchimie des Étoiles — Design System
+   ============================================ */
+
+@theme {
+  /* Colors — from GEMINI.md strict palette */
+  --color-bg-primary: #F4ECE1;
+  --color-bg-secondary: #FAF7F2;
+  --color-bg-surface: #fff8f1;
+  --color-bg-surface-container: #f5ede2;
+  --color-bg-surface-low: #fbf2e7;
+  --color-bg-surface-high: #efe7dc;
+  
+  --color-copper: #C27230;
+  --color-copper-dark: #8f4a05;
+  --color-copper-light: #ad6120;
+  --color-copper-glow: #ffb782;
+  --color-copper-faded: #ffdcc5;
+  
+  --color-teal: #78BEB5;
+  --color-teal-dark: #1d6962;
+  --color-teal-light: #8dd3ca;
+  --color-teal-container: #a6ede3;
+  
+  --color-gold: #D4A645;
+  --color-gold-dark: #775600;
+  --color-gold-light: #f0bf5c;
+  --color-gold-faded: #ffdea3;
+  
+  --color-sage: #8FB580;
+  
+  --color-text: #3A3A3A;
+  --color-text-dark: #1e1b15;
+  --color-text-muted: #544439;
+  --color-outline: #867367;
+  --color-outline-light: #d9c2b4;
+  
+  /* Typography */
+  --font-heading: 'Newsreader', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+
+  /* Spacing scale */
+  --spacing-section: 6rem;
+  --spacing-section-mobile: 3.5rem;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg-primary);
+  overflow-x: hidden;
+  /* Warm linen paper texture via radial noise pattern */
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(194, 114, 48, 0.025) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(120, 190, 181, 0.02) 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 80%, rgba(212, 166, 69, 0.015) 0%, transparent 60%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.76 0 0 0 0 0.45 0 0 0 0 0.19 0 0 0 0.04 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+}
+
+h1 {
+  color: var(--color-copper);
+  font-weight: 300;
+}
+
+h2 {
+  color: var(--color-teal-dark);
+  font-weight: 600;
+}
+
+h3 {
+  color: var(--color-copper);
+  font-weight: 500;
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--color-copper-faded);
+  color: var(--color-copper-dark);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-outline-light);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-outline);
+}
+
+/* Breathing animation for CTA */
+@keyframes breathe {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(194, 114, 48, 0.3); }
+  50% { box-shadow: 0 0 0 8px rgba(194, 114, 48, 0); }
+}
+
+.animate-breathe {
+  animation: breathe 3s ease-in-out infinite;
+}
+
+/* Botanical decoration opacity */
+.botanical-bg {
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+/* Section divider — organic shape */
+.section-divider {
+  position: relative;
+}
+.section-divider::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 10%;
+  right: 10%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, rgba(194, 114, 48, 0.08), rgba(120, 190, 181, 0.08), transparent);
+  border-radius: 999px;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-teal);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Link defaults */
+a {
+  color: var(--color-teal-dark);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: var(--color-copper);
+}
+
+/* Photo styling with copper shadow */
+.photo-frame {
+  border-radius: 1rem;
+  box-shadow: 0 12px 32px rgba(143, 74, 5, 0.12);
+  overflow: hidden;
+}
+
+/* Sacred geometry background for hero */
+.hero-sacred-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background:
+    radial-gradient(ellipse at 70% 40%, rgba(120, 190, 181, 0.3) 0%, transparent 60%),
+    radial-gradient(ellipse at 30% 70%, rgba(143, 181, 128, 0.2) 0%, transparent 60%);
+}
+
+/* Decorative botanical SVG container */
+.botanical-divider {
+  position: relative;
+  height: 80px;
+  overflow: hidden;
+  pointer-events: none;
+}
+.botanical-divider svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.06;
+  color: var(--color-copper);
+}
