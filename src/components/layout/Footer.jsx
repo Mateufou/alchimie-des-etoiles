@@ -94,7 +94,8 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-8 border-t border-[var(--color-outline-light)]/30 text-center">
+        <div className="pt-8 border-t border-[var(--color-outline-light)]/30 text-center flex flex-col items-center">
+          <img src="/assets/decorative/compass-star.svg" alt="" width="50" className="mb-4 opacity-20" />
           <p className="text-xs text-[var(--color-outline)]">
             Thérapeute holistique en Vendée · Énergéticienne bocage vendéen · La Brairie, Terre d'Étoiles
           </p>

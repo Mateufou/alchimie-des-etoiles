@@ -3,7 +3,7 @@ import Button from '../ui/Button';
 
 export default function HeroSection() {
   return (
-    <section id="accueil" className="relative min-h-screen flex items-center overflow-hidden bg-[var(--color-bg-primary)]">
+    <section id="accueil" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Sacred geometry + botanical background */}
       <div className="hero-sacred-bg"></div>
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -117,9 +117,8 @@ export default function HeroSection() {
             className="order-1 lg:order-2 flex justify-center"
           >
             <div className="relative">
-              {/* Photo container */}
               <div 
-                className="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden"
+                className="w-72 h-72 sm:w-80 sm:h-80 lg:w-[28rem] lg:h-[28rem] xl:w-[32rem] xl:h-[32rem] rounded-full overflow-hidden shrink-0"
                 style={{ boxShadow: '0 12px 32px rgba(194, 114, 48, 0.15)' }}
               >
                 <img

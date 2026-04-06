@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <defs>
+    <radialGradient id="wash" cx="50%" cy="50%" r="50%" fx="30%" fy="30%">
+      <stop offset="0%" stop-color="#78BEB5" stop-opacity="1" />
+      <stop offset="40%" stop-color="#78BEB5" stop-opacity="0.6" />
+      <stop offset="70%" stop-color="#78BEB5" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#78BEB5" stop-opacity="0" />
+    </radialGradient>
+    <filter id="blur">
+      <feGaussianBlur stdDeviation="20" />
+    </filter>
+  </defs>
+  <path d="M150 20 C230 10, 280 80, 270 160 C260 250, 180 290, 120 270 C50 240, 10 180, 30 110 C50 30, 90 30, 150 20 Z" fill="url(#wash)" filter="url(#blur)"/>
+  <ellipse cx="120" cy="140" rx="80" ry="110" fill="url(#wash)" filter="url(#blur)" transform="rotate(30 120 140)"/>
+</svg>

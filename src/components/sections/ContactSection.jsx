@@ -13,7 +13,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-24 lg:py-32 bg-[var(--color-bg-primary)] section-divider">
+    <section id="contact" className="py-24 lg:py-32 bg-transparent section-divider">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

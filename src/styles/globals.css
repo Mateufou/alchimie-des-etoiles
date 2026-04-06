@@ -61,11 +61,7 @@ body {
   background-color: var(--color-bg-primary);
   overflow-x: hidden;
   /* Warm linen paper texture via radial noise pattern */
-  background-image:
-    radial-gradient(ellipse at 20% 50%, rgba(194, 114, 48, 0.025) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 20%, rgba(120, 190, 181, 0.02) 0%, transparent 60%),
-    radial-gradient(ellipse at 50% 80%, rgba(212, 166, 69, 0.015) 0%, transparent 60%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.76 0 0 0 0 0.45 0 0 0 0 0.19 0 0 0 0.04 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.1'/%3E%3C/svg%3E");
   background-repeat: repeat;
   background-attachment: fixed;
 }
@@ -119,6 +115,15 @@ h3 {
 
 .animate-breathe {
   animation: breathe 3s ease-in-out infinite;
+}
+
+@keyframes dotTwinkle {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.35; }
+}
+
+.dot-scatter {
+  animation: dotTwinkle 5s ease-in-out infinite;
 }
 
 /* Botanical decoration opacity */

@@ -23,7 +23,7 @@ export default function AboutSection() {
           >
             <div className="relative">
               <div 
-                className="w-64 h-64 sm:w-80 sm:h-80 lg:w-[22rem] lg:h-[22rem] rounded-full overflow-hidden"
+                className="w-64 h-64 sm:w-80 sm:h-80 lg:w-[26rem] lg:h-[26rem] xl:w-[28rem] xl:h-[28rem] rounded-full overflow-hidden shrink-0"
                 style={{ boxShadow: '0 12px 32px rgba(194, 114, 48, 0.15)' }}
               >
                 <img

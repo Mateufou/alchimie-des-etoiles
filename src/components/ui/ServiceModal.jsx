@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Button from './Button';
 
 // Same icon set from ServiceCard
 const iconPaths = {
@@ -81,120 +80,170 @@ const iconPaths = {
 };
 
 const categoryColors = {
-  'Découverte': 'bg-[var(--color-teal-container)]/30 text-[var(--color-teal-dark)]',
-  'Libération': 'bg-[var(--color-copper-faded)] text-[var(--color-copper)]',
-  'Transformation': 'bg-[var(--color-gold-faded)]/60 text-[var(--color-gold-dark)]',
-  'Expression': 'bg-[var(--color-sage)]/15 text-[var(--color-sage)]',
+  'Découverte': '#78BEB5',
+  'Libération': '#C27230',
+  'Transformation': '#D4A645',
+  'Expression': '#8FB580',
 };
 
 export default function ServiceModal({ service, isOpen, onClose }) {
-  // Lock body scroll when open
+  // Lock body scroll and handle escape key when open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
+      const handleEsc = (e) => {
+        if (e.key === 'Escape') onClose();
+      };
+      window.addEventListener('keydown', handleEsc);
+      return () => {
+        document.body.style.overflow = '';
+        window.removeEventListener('keydown', handleEsc);
+      };
     } else {
       document.body.style.overflow = '';
     }
-    return () => { document.body.style.overflow = ''; };
-  }, [isOpen]);
+  }, [isOpen, onClose]);
 
   return (
     <AnimatePresence>
       {isOpen && service && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
-          className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6"
-          onClick={onClose}
-        >
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-5">
           {/* Backdrop */}
-          <div className="absolute inset-0 bg-[var(--color-text-dark)]/40 backdrop-blur-sm" />
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            onClick={onClose}
+            style={{ 
+              backgroundColor: 'rgba(0,0,0,0.45)', 
+              backdropFilter: 'blur(4px)',
+              WebkitBackdropFilter: 'blur(4px)'
+            }}
+            className="absolute inset-0 cursor-pointer"
+          />
 
           {/* Modal */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.92, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.92, y: 20 }}
-            transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            transition={{ duration: 0.3, ease: 'easeOut' }}
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-2xl max-h-[85vh] overflow-y-auto bg-[var(--color-bg-surface)] rounded-3xl shadow-[0_24px_64px_rgba(143,74,5,0.15)]"
+            className="relative w-full max-w-[860px] bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row"
           >
-            {/* Close button */}
-            <button
-              onClick={onClose}
-              className="absolute top-5 right-5 w-10 h-10 rounded-full bg-[var(--color-bg-surface-container)] flex items-center justify-center text-[var(--color-text-muted)] hover:text-[var(--color-copper)] hover:bg-[var(--color-copper-faded)] transition-all duration-200 cursor-pointer z-10"
-              aria-label="Fermer"
+            {/* Left sidebar (hidden on small screens < 900px) */}
+            <div 
+              className="hidden md:flex flex-col items-center w-[250px] shrink-0 py-8 px-4 border-r border-[#78BEB5]/10"
+              style={{ background: 'linear-gradient(to bottom, #F4ECE1, rgba(120,190,181,0.06))' }}
             >
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-
-            {/* Header with icon */}
-            <div className="p-8 pb-0 text-center">
-              <div className="text-[var(--color-copper)] mb-4 flex justify-center">
+              {/* Image placeholder */}
+              <div className="w-[175px] h-[245px] rounded-[12px] bg-white/50 shadow-sm border border-[#78BEB5]/20 mb-6">
+                {/* Reserved for future image */}
+              </div>
+              
+              {/* Service Icon (Moved below image) */}
+              <div className="w-[36px] h-[36px] text-[#C27230] opacity-80 mb-5 flex items-center justify-center [&>svg]:w-full [&>svg]:h-full">
                 {iconPaths[service.icon]}
               </div>
-              <span className={`inline-block text-xs font-semibold tracking-wider uppercase px-3 py-1 rounded-full mb-4 ${categoryColors[service.category] || ''}`}>
+              
+              {/* Category chip */}
+              <span 
+                className="text-xs font-bold uppercase tracking-[0.15em] text-center"
+                style={{ color: categoryColors[service.category] }}
+              >
                 {service.category}
               </span>
-              <h2 className="font-[var(--font-heading)] text-2xl sm:text-3xl font-semibold text-[var(--color-teal-dark)] mb-2">
-                {service.title}
-              </h2>
             </div>
 
-            {/* Divider */}
-            <div className="mx-8 my-6 h-[1.5px] bg-gradient-to-r from-transparent via-[var(--color-copper)]/20 to-transparent"></div>
+            {/* Right content panel */}
+            <div className="flex-1 p-[28px] relative flex flex-col max-h-[92vh]">
+              {/* Close button */}
+              <button
+                onClick={onClose}
+                className="absolute top-[28px] right-[28px] w-[28px] h-[28px] rounded-full border-[0.5px] border-[#78BEB5]/20 flex items-center justify-center text-[#78BEB5] hover:bg-[#78BEB5]/10 transition-colors cursor-pointer z-10"
+                aria-label="Fermer"
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
 
-            {/* Content */}
-            <div className="px-8 pb-4">
-              {service.fullDescription.split('\n\n').map((paragraph, i) => {
-                // Check for bullet points
-                if (paragraph.includes('•')) {
-                  const lines = paragraph.split('\n');
-                  return (
-                    <div key={i} className="mb-4">
-                      {lines.map((line, j) => {
-                        if (line.startsWith('•')) {
+              {/* Title & Separator */}
+              <div className="pr-10 shrink-0">
+                <h3 
+                  className="font-[var(--font-heading)] font-normal text-[#C27230] mb-[20px]"
+                  style={{ fontSize: '24px', fontFamily: '"Newsreader", serif' }}
+                >
+                  {service.title}
+                </h3>
+                <div className="w-[40px] h-[2px] bg-[#78BEB5]" style={{ opacity: 0.4, marginBottom: '20px' }}></div>
+              </div>
+
+              {/* Text content area */}
+              <div className="overflow-y-auto pr-2 custom-scrollbar flex-1 pb-2" style={{ maxHeight: '520px' }}>
+                <style>{`
+                  .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+                  .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+                  .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(120,190,181,0.2); border-radius: 10px; }
+                  .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: rgba(120,190,181,0.4); }
+                `}</style>
+                
+                {/* Extra visibility on mobile where sidebar is hidden */}
+                <span 
+                  className="md:hidden inline-block text-xs font-bold uppercase tracking-[0.1em] mb-4"
+                  style={{ color: categoryColors[service.category] }}
+                >
+                  {service.category}
+                </span>
+
+                {service.fullDescription.split('\n\n').map((paragraph, i) => {
+                  // Check for bullet points
+                  if (paragraph.includes('•')) {
+                    const lines = paragraph.split('\n');
+                    return (
+                      <div key={i} className="mb-[14px]">
+                        {lines.map((line, j) => {
+                          if (line.trim().startsWith('•')) {
+                            return (
+                              <div key={j} className="flex items-start gap-2 ml-2 mb-[6px]">
+                                <span className="text-[#C27230]" style={{ marginTop: '0.4rem' }}>
+                                  <svg className="w-[10px] h-[10px]" fill="currentColor" viewBox="0 0 12 12">
+                                    <circle cx="6" cy="6" r="3" />
+                                  </svg>
+                                </span>
+                                <span 
+                                  className="text-[#3A3A3A]" 
+                                  style={{ fontSize: '14.5px', lineHeight: 1.85, fontFamily: '"Plus Jakarta Sans", sans-serif' }}
+                                >
+                                  {line.replace('• ', '').trim()}
+                                </span>
+                              </div>
+                            );
+                          }
                           return (
-                            <div key={j} className="flex items-start gap-2 ml-2 mb-2">
-                              <span className="text-[var(--color-copper)] mt-1.5 flex-shrink-0">
-                                <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 12 12">
-                                  <path d="M6 2l1.5 3.5L11 7l-3.5 1.5L6 12l-1.5-3.5L1 7l3.5-1.5z"/>
-                                </svg>
-                              </span>
-                              <span className="text-[var(--color-text)] leading-relaxed text-[0.95rem]">{line.replace('• ', '')}</span>
-                            </div>
+                            <p key={j} className="text-[#3A3A3A] mb-[6px]" style={{ fontSize: '14.5px', lineHeight: 1.85, fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
+                              {line}
+                            </p>
                           );
-                        }
-                        return <p key={j} className="text-[var(--color-text)] leading-relaxed text-[0.95rem] mb-2">{line}</p>;
-                      })}
-                    </div>
+                        })}
+                      </div>
+                    );
+                  }
+                  return (
+                    <p 
+                      key={i} 
+                      className="text-[#3A3A3A]" 
+                      style={{ fontSize: '14.5px', lineHeight: 1.85, fontFamily: '"Plus Jakarta Sans", sans-serif', marginBottom: '14px' }}
+                    >
+                      {paragraph}
+                    </p>
                   );
-                }
-                return (
-                  <p key={i} className="text-[var(--color-text)] leading-relaxed text-[0.95rem] mb-4">
-                    {paragraph}
-                  </p>
-                );
-              })}
-            </div>
-
-            {/* CTA */}
-            <div className="px-8 pb-8 pt-4">
-              <div className="bg-[var(--color-bg-surface-low)] rounded-2xl p-6 text-center">
-                <p className="text-[var(--color-text-muted)] text-sm mb-4">
-                  Envie d'en savoir plus ou de réserver ?
-                </p>
-                <Button href="#contact" variant="primary" onClick={onClose}>
-                  Prendre rendez-vous
-                </Button>
+                })}
               </div>
             </div>
           </motion.div>
-        </motion.div>
+        </div>
       )}
     </AnimatePresence>
   );
