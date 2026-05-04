@@ -13,7 +13,7 @@ const pillars = [
     number: '12+',
     unit: '',
     title: 'techniques intégrées',
-    description: "Une approche évolutive unique combinant énergétique, hypnose, astrologie védique, runes, massage, vibrations sonores, et plus encore.",
+    description: "Une approche évolutive unique combinant énergétique, hypnose, astrologie védique, runes, vibrations sonores, et plus encore.",
     accentColor: 'var(--color-teal)',
     textColor: 'text-[var(--color-teal-dark)]',
   },

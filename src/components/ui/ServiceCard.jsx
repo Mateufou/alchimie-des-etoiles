@@ -77,6 +77,12 @@ const iconPaths = {
       <circle cx="30" cy="28" r="4" stroke="currentColor" strokeWidth="1.5" opacity="0.3"/>
     </svg>
   ),
+  fire: (
+    <svg viewBox="0 0 48 48" fill="none" className="w-12 h-12">
+      <path d="M24 44C32.8366 44 40 36.8366 40 28C40 18 24 4 24 4C24 4 8 18 8 28C8 36.8366 15.1634 44 24 44Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M24 44C29.5228 44 34 39.5228 34 34C34 26 24 16 24 16C24 16 14 26 14 34C14 39.5228 18.4772 44 24 44Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.4"/>
+    </svg>
+  ),
 };
 
 const categoryColors = {

@@ -130,30 +130,41 @@ export default function ServiceModal({ service, isOpen, onClose }) {
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.3, ease: 'easeOut' }}
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-[860px] bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row"
+            className="relative w-full max-w-[1000px] bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row"
           >
             {/* Left sidebar (hidden on small screens < 900px) */}
-            <div 
-              className="hidden md:flex flex-col items-center w-[250px] shrink-0 py-8 px-4 border-r border-[#78BEB5]/10"
-              style={{ background: 'linear-gradient(to bottom, #F4ECE1, rgba(120,190,181,0.06))' }}
-            >
-              {/* Image placeholder */}
-              <div className="w-[175px] h-[245px] rounded-[12px] bg-white/50 shadow-sm border border-[#78BEB5]/20 mb-6">
-                {/* Reserved for future image */}
-              </div>
+            <div className="hidden md:flex flex-col items-center justify-end w-[360px] shrink-0 border-r border-[#78BEB5]/10 bg-[var(--color-bg-primary)] relative overflow-hidden pb-10">
+              {/* Background Image or Gradient */}
+              {service.image ? (
+                <img src={service.image} alt={service.title} className="absolute inset-0 w-full h-full object-cover object-center" />
+              ) : (
+                <div 
+                  className="absolute inset-0 w-full h-full"
+                  style={{ background: 'linear-gradient(to bottom, #F4ECE1, rgba(120,190,181,0.06))' }}
+                />
+              )}
               
-              {/* Service Icon (Moved below image) */}
-              <div className="w-[36px] h-[36px] text-[#C27230] opacity-80 mb-5 flex items-center justify-center [&>svg]:w-full [&>svg]:h-full">
-                {iconPaths[service.icon]}
+              {/* Overlay Content - Floating transparent */}
+              <div className="relative z-10 flex flex-col items-center">
+                {/* Service Icon */}
+                <div 
+                  className="w-[42px] h-[42px] mb-3 flex items-center justify-center drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)] [&>svg]:w-full [&>svg]:h-full"
+                  style={{ color: categoryColors[service.category], filter: 'drop-shadow(0px 0px 8px rgba(255,255,255,0.8))' }}
+                >
+                  {iconPaths[service.icon]}
+                </div>
+                
+                {/* Category chip */}
+                <span 
+                  className="text-xs font-bold uppercase tracking-[0.2em] text-center"
+                  style={{ 
+                    color: categoryColors[service.category],
+                    textShadow: '0 0 10px rgba(255,255,255,1), 0 0 20px rgba(255,255,255,0.8)'
+                  }}
+                >
+                  {service.category}
+                </span>
               </div>
-              
-              {/* Category chip */}
-              <span 
-                className="text-xs font-bold uppercase tracking-[0.15em] text-center"
-                style={{ color: categoryColors[service.category] }}
-              >
-                {service.category}
-              </span>
             </div>
 
             {/* Right content panel */}

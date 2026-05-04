@@ -2,6 +2,7 @@ import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import HeroSection from './components/sections/HeroSection';
 import AboutSection from './components/sections/AboutSection';
+import LeadMagnetSection from './components/sections/LeadMagnetSection';
 import DifferenciatorsSection from './components/sections/DifferenciatorsSection';
 import ServicesGrid from './components/sections/ServicesGrid';
 import SessionTimeline from './components/sections/SessionTimeline';
@@ -26,6 +27,7 @@ export default function App() {
         <BiophilicBackground />
         <HeroSection />
         <AboutSection />
+        <LeadMagnetSection />
         <SectionSeparator />
         <DifferenciatorsSection />
         <ServicesGrid />
