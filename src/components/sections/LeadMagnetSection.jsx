@@ -28,7 +28,7 @@ export default function LeadMagnetSection() {
             <iframe 
               width="700" 
               height="500" 
-              src="https://e73bf181.sibforms.com/serve/MUIFAHZdYn1jYXcUYoEN0fekF_MwcwJmKLXAzFPS35leKEj_3ninaj41X9mXvU454dOlQxsRI1dqH2k0I2Iu7w7NZ3MWmyBpwGIN6_LGD_VY8o8DS-KoqQGWpnBs6yWnlM-87XCrfC7D_gG2EGvoHPcFjiMT-bKi4MhyT0HlP8D0KMGsroaaaaPCFAAFOz14DVOnpi5x4HSy2gW64w==" 
+              src="https://e73bf181.sibforms.com/serve/MUIFAHZdYn1jYXcUYoEN0fekF_MwcwJmKLXAzFPS35leKEj_3ninaj41X9mXvU454dOIQxsRI1dqH2k0I2lu7w7NZ3MWmyBpwGIN6_LGD_VY8o8DS-KoqQGWpnBs6yWnlM-87XCrfC7D_gG2EGvoHPcFjiMT-bKi4MhyT0HIP8D0KMGsroaaaaPCFAAFOz14DVOnpi5x4HSy2gW64w==" 
               frameBorder="0" 
               scrolling="auto" 
               allowFullScreen 
