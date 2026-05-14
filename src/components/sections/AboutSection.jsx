@@ -63,7 +63,7 @@ export default function AboutSection() {
 
             {/* Intro text */}
             <p className="text-lg text-[var(--color-text-dark)] leading-relaxed mb-4">
-              Hello, moi c'est Frédérique. Je suis accompagnatrice holistique depuis 15 ans, j'habite dans le bocage Vendéen. J'habite et j'exerce dans un lieu magique : « la Brairie Terre d'étoiles », entourée de ma famille et de mes animaux.
+              Hello, moi c'est Frédérique. Je suis accompagnatrice holistique depuis 15 ans, j'habite dans le bocage Vendéen. J'exerce dans un lieu magique : « la Brairie Terre d'étoiles », entourée de ma famille et de mes animaux.
             </p>
 
             {/* Signature */}
