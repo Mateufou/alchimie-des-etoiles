@@ -100,10 +100,9 @@ export default function Header() {
             </Button>
           </div>
 
-          {/* Mobile hamburger */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden flex flex-col gap-1.5 p-2 cursor-pointer"
+            className="lg:hidden relative z-[60] flex flex-col justify-center items-center w-12 h-12 gap-1.5 cursor-pointer touch-manipulation"
             aria-label="Menu"
           >
             <motion.span
