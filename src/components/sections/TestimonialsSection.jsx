@@ -32,7 +32,7 @@ export default function TestimonialsSection() {
     if (isPaused) return;
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 10000); // 10 seconds as requested
+    }, 5000); // 5 seconds
     
     return () => clearInterval(timer);
   }, [isPaused]);
