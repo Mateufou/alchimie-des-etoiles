@@ -114,12 +114,12 @@ export default function ServiceCard({ service, index, onOpenModal }) {
       </div>
 
       {/* Title */}
-      <h3 className="font-[var(--font-heading)] text-lg font-medium text-[var(--color-copper)] leading-tight">
+      <h3 className="font-[var(--font-heading)] text-xl font-medium text-[var(--color-copper)] leading-tight">
         {service.title}
       </h3>
 
       {/* Description */}
-      <p className="text-sm text-[var(--color-text-muted)] leading-relaxed flex-1">
+      <p className="text-sm italic text-[var(--color-text-muted)] leading-relaxed flex-1">
         {service.shortDescription}
       </p>
 
