@@ -48,8 +48,8 @@ export default function Header() {
     e.preventDefault();
     const target = document.querySelector(href);
     if (target) {
-      const offsetTop = target.offsetTop - 80;
-      window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+      const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({ top: targetPosition - 80, behavior: 'smooth' });
     }
     setMobileOpen(false);
   };
