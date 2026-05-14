@@ -27,10 +27,10 @@ export default function LeadMagnetSection() {
           <div className="w-full flex justify-center h-[380px]">
             <iframe 
               width="540" 
-              height="380" 
-              src="https://e73bf181.sibforms.com/serve/MUIFAJB-8oI6A-5BjuUQ9N81gK1lmvEIu3KE0d6dcKukJVexcpy5XB2GDXbHR-v1-oY21lcb6Ngd4-hI53c5t0wPYxx6vzeUbaD1F2pkBuPmQT9qfLSzE4c_1MnoqWikNSIg8d2nAOGg-XEp5GJSl_jsAV_4l0sSnEIi_Lx6aPSoGYus5o6Cw62t3HHycKpcAknbALQQ2abk3p9K7g==" 
+              height="305" 
+              src="https://e73bf181.sibforms.com/serve/MUIFAHZdYn1jYXcUYoEN0fekF_MwcwJmKLXAzFPS35leKEj_3ninaj41X9mXvU454dOlQxsRI1dqH2k0I2Iu7w7NZ3MWmyBpwGIN6_LGD_VY8o8DS-KoqQGWpnBs6yWnlM-87XCrfC7D_gG2EGvoHPcFjiMT-bKi4MhyT0HlP8D0KMGsroaaaaPCFAAFOz14DVOnpi5x4HSy2gW64w==" 
               frameBorder="0" 
-              scrolling="no" 
+              scrolling="auto" 
               allowFullScreen 
               style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', maxWidth: '100%', border: 'none' }}
             ></iframe>
