@@ -24,10 +24,10 @@ export default function LeadMagnetSection() {
             Recevez gratuitement mon guide d'accompagnement. Entrez votre email ci-dessous pour le recevoir directement dans votre boîte de réception.
           </p>
           
-          <div className="w-full flex justify-center h-[380px]">
+          <div className="w-full flex justify-center">
             <iframe 
-              width="540" 
-              height="305" 
+              width="700" 
+              height="500" 
               src="https://e73bf181.sibforms.com/serve/MUIFAHZdYn1jYXcUYoEN0fekF_MwcwJmKLXAzFPS35leKEj_3ninaj41X9mXvU454dOlQxsRI1dqH2k0I2Iu7w7NZ3MWmyBpwGIN6_LGD_VY8o8DS-KoqQGWpnBs6yWnlM-87XCrfC7D_gG2EGvoHPcFjiMT-bKi4MhyT0HlP8D0KMGsroaaaaPCFAAFOz14DVOnpi5x4HSy2gW64w==" 
               frameBorder="0" 
               scrolling="auto" 
