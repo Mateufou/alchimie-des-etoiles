@@ -27,7 +27,6 @@ export default function App() {
         <BiophilicBackground />
         <HeroSection />
         <AboutSection />
-        <LeadMagnetSection />
         <SectionSeparator />
         <DifferenciatorsSection />
         <ServicesGrid />
@@ -37,6 +36,7 @@ export default function App() {
         <PricingSection />
         <SectionSeparator />
         <FAQSection />
+        <LeadMagnetSection />
         <ContactSection />
       </main>
       <Footer />

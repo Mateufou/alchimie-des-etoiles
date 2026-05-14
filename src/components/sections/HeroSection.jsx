@@ -90,7 +90,7 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.55 }}
               className="text-lg text-[var(--color-text)] leading-relaxed mb-10 max-w-xl"
             >
-              J'accompagne les personnes perdues et épuisées dont la boussole interne est brisée en révélant les clés qui débloquent votre potentiel caché, pour enfin vivre une existence authentique alignée à votre véritable nature.
+              J'accompagne les personnes perdues et épuisées, dont la boussole interne est brisée, en révélant les clés qui débloquent votre potentiel caché, pour enfin vivre une existence authentique alignée à votre véritable nature.
             </motion.p>
 
             {/* CTAs */}
