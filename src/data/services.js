@@ -6,7 +6,7 @@ export const services = [
     id: 'soins-energetiques',
     title: 'Séances énergétiques',
     category: 'Libération',
-    shortDescription: "Les séances énergétiques s'appuient sur les énergies du moment pour offrir une harmonisation complète du corps et de l'esprit.",
+    shortDescription: "Une harmonisation profonde du corps et de l'esprit pour restaurer la circulation de votre énergie vitale...",
     fullDescription: `Les séances énergétiques sont au cœur de ma pratique. Elles s'appuient sur les énergies du moment pour offrir une harmonisation complète du corps et de l'esprit.
 
 Chaque séance est unique et s'adapte à vos besoins du moment. Je me connecte à votre champ énergétique pour identifier les zones de blocage et y apporter la lumière et l'harmonisation nécessaires. Cette séance permet de libérer les émotions cristallisées, les schémas répétitifs et les liens énergétiques qui ne vous servent plus, tout en agissant sur les différents corps subtils pour restaurer la circulation naturelle de l'énergie vitale.
@@ -19,7 +19,7 @@ La séance permet également d'harmoniser en douceur, dans le corps, les nouvell
     id: 'hypnose-therapeutique',
     title: 'Hypnose',
     category: 'Libération',
-    shortDescription: "L'hypnose est un état modifié de conscience où votre attention est focalisée et votre réceptivité amplifiée, permettant d'accéder à vos ressources intérieures.",
+    shortDescription: "Une méthode douce pour libérer les blocages qui freinent votre évolution...",
     fullDescription: `L'hypnose : un outil puissant de transformation.
 
 Dans mes accompagnements, j'utilise l'hypnose comme une méthode douce et naturelle pour vous aider à atteindre vos objectifs personnels. L'hypnose est un état modifié de conscience, entre l'éveil et le sommeil, où votre attention est focalisée et votre réceptivité amplifiée. Contrairement aux idées reçues, vous restez conscient et en contrôle pendant toute la séance.
@@ -39,7 +39,7 @@ L'hypnose vous permet d'accéder à votre inconscient, cette partie profonde de 
     id: 'astrologie-vedique',
     title: 'Astrologie védique (Jyotish)',
     category: 'Découverte',
-    shortDescription: "Une sagesse ancestrale originaire de l'Inde, des Védas. Elle permet de comprendre notre nature profonde, nos défis et nos potentiels.",
+    shortDescription: "La science de la lumière pour éclairer votre mission de vie, comprendre vos forces innées et vos rythmes intérieurs...",
     fullDescription: `L'Astrologie Védique, ou Jyotish — « Science de la Lumière ».
 
 Une sagesse ancestrale originaire de l'Inde, des Védas (textes sacrés). Elle permet de comprendre notre nature profonde, nos défis, nos potentiels et les grandes étapes de notre vie. Elle se base sur la position des planètes au moment exact de notre naissance.
@@ -54,7 +54,7 @@ La carte natale védique révèle votre dharma (mission de vie), vos forces inn�
     id: 'decodage-prenoms',
     title: 'Décodage alchimique des énergies des prénoms',
     category: 'Découverte',
-    shortDescription: "Le décodage alchimique des prénoms est une pratique unique qui permet de révéler les énergies cachées inscrites dans les lettres de votre prénom.",
+    shortDescription: "Découvrez les messages subtils et les potentiels cachés qui vibrent à travers les lettres de votre prénom...",
     fullDescription: `Décodage alchimique des énergies des prénoms.
 
 Chaque prénom porte en lui des vibrations, des forces et des messages subtils qui influencent notre chemin de vie. Le décodage alchimique des prénoms est une pratique unique qui permet de révéler les énergies cachées inscrites dans les lettres de votre prénom.
@@ -69,7 +69,7 @@ Connaître les vibrations de votre prénom, c'est accéder à une carte énergé
     id: 'communication-animale',
     title: 'Communication animale',
     category: 'Expression',
-    shortDescription: "Depuis mon installation en Vendée, j'ai développé une faculté particulière : celle de communiquer avec les animaux.",
+    shortDescription: "Un pont intuitif entre vous et vos compagnons pour traduire leurs émotions, comprendre leurs besoins et apaiser leurs maux...",
     fullDescription: `La Communication Animale — un pont entre les mondes.
 
 Depuis mon installation en Vendée, j'ai développé une faculté particulière : celle de communiquer avec les animaux. Cette connexion se manifeste à travers des impressions sensorielles, des images mentales et des messages que les animaux me transmettent.
@@ -88,7 +88,7 @@ Cette pratique m'est particulièrement chère car je vis moi-même entourée d'a
     id: 'runes-nordiques',
     title: 'Runes, Oracles & Tarots',
     category: 'Découverte',
-    shortDescription: "Des messagères sacrées au service de votre chemin",
+    shortDescription: "Des miroirs vivants entre votre âme et l'invisible pour révéler ce qui est caché et éclairer votre réalité...",
     fullDescription: `Qu'elles soient gravées dans la pierre ou imprimées sur papier, les runes, les cartes oracles et les tarots parlent un même langage : celui de l'invisible, du ressenti, de l'âme.
 
 Les runes, reçues en initiation auprès d'une chamane nordique au cœur des bois, m'ouvrent aux forces de la nature et aux sagesses ancestrales. Elles révèlent ce qui est caché, lèvent les blocages, activent les potentiels.
@@ -103,7 +103,7 @@ Ensemble, ces outils forment un espace de guidance profond, où chaque tirage de
     id: 'vibrations-sonores',
     title: 'Vibrations sonores',
     category: 'Transformation',
-    shortDescription: "Mon tambour chamanique s'appelle Niwa — « étoile qui voyage ». Ses battements résonnent avec l'invisible et facilitent les passages intérieurs.",
+    shortDescription: "Le chant du tambour et des bols tibétains pour dissoudre les tensions là où les mots ne suffisent plus...",
     fullDescription: `Le pouvoir des vibrations sonores.
 
 Dans mes accompagnements, j'utilise les vibrations du son pour harmoniser les énergies, libérer les blocages et ouvrir des portes subtiles.
@@ -120,7 +120,7 @@ Les vibrations sonores pénètrent là où les mots ne peuvent aller. Elles apai
     id: 'le-rituel',
     title: "Le rituel : bien plus qu'un mot",
     category: 'Transformation',
-    shortDescription: "Le mot « rituel » évoque parfois des images mystérieuses ou ésotériques qui peuvent faire hésiter. Et pourtant, nous pratiquons tous des rituels au quotidien — le café du matin préparé avec soin, les mots doux avant de dormir, la bougie allumée dans un moment de recueillement. Un rituel, c'est simplement un acte posé avec intention.",
+    shortDescription: "Un acte sacré posé avec intention pour transmuter vos peurs anciennes et vous délester de ce qui vous alourdit...",
     fullDescription: `Dans le cadre d'un accompagnement, le rituel de libération est un espace sacré que nous créons ensemble pour permettre à ce qui alourdit — peurs anciennes, croyances héritées, mémoires transmises de génération en génération — de se transformer et de se libérer.
 
 Écrire ce qui nous pèse pour le confier au feu, laisser la vibration du tambour traverser le corps et dénouer ce que les mots ne suffisent pas à atteindre, sentir les runes et la voix guider l'énergie vers sa juste place... Ces gestes ne relèvent pas de la magie au sens spectaculaire du terme. Ils parlent un langage que le corps et l'âme comprennent profondément : celui du symbole, du souffle et de la présence.
@@ -135,7 +135,7 @@ Ce rituel, suivi d'une séance énergétique, offre à l'être entier — corps,
     id: 'methode-pimabo',
     title: 'Méthode Pimabo',
     category: 'Expression',
-    shortDescription: "Cette méthode révolutionnaire libère votre créativité naturelle en vous affranchissant de la peur du jugement et de la recherche de perfection.",
+    shortDescription: "Un lâcher-prise joyeux pour oser dessiner sans jugement et révéler ce que les mots peinent parfois à exprimer...",
     fullDescription: `Osez l'art Pimabo : « La créativité est un amusement visuel ».
 
 J'enseigne la méthode unique de dessin créée par l'artiste peintre Pimabo. Son credo : « Tout le monde peut dessiner ».
