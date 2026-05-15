@@ -28,7 +28,7 @@ export default function AboutSection() {
               >
                 <img
                   src="/images/hero-fg.jpg"
-                  alt="Frédérique Guyot à La Brairie"
+                  alt="Frédérique Guyot énergéticienne La Brairie bocage vendéen"
                   className="w-full h-full object-cover object-top"
                   loading="lazy"
                 />
@@ -70,7 +70,7 @@ export default function AboutSection() {
             <div className="flex items-center gap-3 mb-8 pb-8 border-b border-[var(--color-copper)]/20">
               <img
                 src="/images/portrait-fg.jpg"
-                alt="Frédérique Guyot"
+                alt="Portrait de Frédérique Guyot thérapeute holistique soins énergétiques Vendée"
                 className="w-12 h-12 rounded-full object-cover shadow-sm"
               />
               <div>

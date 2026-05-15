@@ -71,7 +71,7 @@ export default function Header() {
           <a href="#accueil" onClick={(e) => handleNavClick(e, '#accueil')} className="flex items-center gap-3 group">
             <img
               src="/images/logo.jpg"
-              alt="L'Alchimie des Étoiles"
+              alt="Logo L'Alchimie des Étoiles - Frédérique Guyot thérapeute holistique"
               className="h-12 lg:h-14 w-auto object-contain rounded-lg"
             />
             <span className="hidden sm:inline font-[var(--font-heading)] text-lg lg:text-xl font-light text-[var(--color-copper)] tracking-tight italic">

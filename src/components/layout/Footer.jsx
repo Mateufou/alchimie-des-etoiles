@@ -8,7 +8,7 @@ export default function Footer() {
             <div className="flex items-center gap-3 mb-4">
               <img
                 src="/images/logo.jpg"
-                alt="L'Alchimie des Étoiles"
+                alt="Logo L'Alchimie des Étoiles - Thérapeute holistique Vendée"
                 className="h-14 w-auto object-contain rounded-lg"
               />
               <h3 className="font-[var(--font-heading)] text-xl font-light text-[var(--color-copper)] italic">

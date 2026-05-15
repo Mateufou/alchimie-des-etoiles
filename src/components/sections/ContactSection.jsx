@@ -223,7 +223,7 @@ export default function ContactSection() {
               <div className="h-[250px] w-full relative">
                 <img 
                   src="/assets/images/la-brairie.jpg" 
-                  alt="La Brairie, Terre d'Étoiles" 
+                  alt="La Brairie Terre d'Étoiles cabinet de soins énergétiques et hypnose Logé-Fougereuse Vendée" 
                   className="w-full h-full object-cover object-center"
                 />
               </div>

@@ -113,7 +113,7 @@ export default function PricingSection() {
               >
                 <img 
                   src="/images/tambour-niwa.jpg" 
-                  alt="Tambour chamanique de la séance" 
+                  alt="Tambour chamanique pour séance de vibrations sonores et soins énergétiques Vendée" 
                   className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-1000 ease-out"
                   loading="lazy"
                 />

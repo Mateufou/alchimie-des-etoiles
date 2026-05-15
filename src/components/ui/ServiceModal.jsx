@@ -136,7 +136,7 @@ export default function ServiceModal({ service, isOpen, onClose }) {
             <div className="hidden md:flex flex-col items-center justify-end w-[360px] shrink-0 border-r border-[#78BEB5]/10 bg-[var(--color-bg-primary)] relative overflow-hidden pb-10">
               {/* Background Image or Gradient */}
               {service.image ? (
-                <img src={service.image} alt={service.title} className="absolute inset-0 w-full h-full object-cover object-center" />
+                <img src={service.image} alt={`${service.title} - Frédérique Guyot thérapeute holistique Vendée`} className="absolute inset-0 w-full h-full object-cover object-center" />
               ) : (
                 <div 
                   className="absolute inset-0 w-full h-full"

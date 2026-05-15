@@ -123,7 +123,7 @@ export default function HeroSection() {
               >
                 <img
                   src="/images/fg-tambour.jpg"
-                  alt="Frédérique Guyot — Accompagnatrice holistique"
+                  alt="Frédérique Guyot thérapeute holistique Vendée"
                   className="w-full h-full object-cover object-center"
                   loading="eager"
                 />
